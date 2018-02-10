@@ -59,7 +59,9 @@ new UpgradeHelper.Builder(ActivitySet.this)
 * apkUrl 下载地址
 * upgradeNotes 显示在更新提示框的内容
 * upgradeTitle 显示在更新提示框的标题，如没有使用默认标题
-* isForce 0 ：可稍后更新，马上更新 1 ：只有马上更新（不更新不能使用的情况） 2 ：提示更新，不能做任何事情（特殊情况，如不兼容） 如图：
-![image](https://raw.githubusercontent.com/paipo/screenshots/master/tc.png)
-![image](https://raw.githubusercontent.com/paipo/screenshots/master/tc.png)
-![image](https://raw.githubusercontent.com/paipo/screenshots/master/tc.png)
+* isForce 0 ：可稍后更新，马上更新
+![image](https://raw.githubusercontent.com/paipo/screenshots/master/lightup0.jpg)
+* isForce 1 ：只有马上更新（不更新不能使用的情况）
+![image](https://raw.githubusercontent.com/paipo/screenshots/master/lightup1.jpg)
+* isForce 2 ：提示更新，不能做任何事情（特殊情况，如不兼容）
+![image](https://raw.githubusercontent.com/paipo/screenshots/master/lightup2.jpg)
