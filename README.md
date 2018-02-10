@@ -1,5 +1,5 @@
 # LightAndroidUpgrade
-安卓更新的一个简单组件
+安卓版本更新的一个简单组件
 
 ## 使用方法
 android studio 引用 lightupgrade library 到项目 , 在 gradle 添加代码 , 例如
