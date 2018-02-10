@@ -49,7 +49,7 @@ new UpgradeHelper.Builder(ActivitySet.this)
 		"upgradeTitle":"", 
 		"isForce":"0", 
 		"fileSize":"2000", 
-		"md5":"6013d8c92948313df8af5d9e7bc323c5" 
+		"md5":"xxxxxxxxx" 
 		} 
 }
 ```
@@ -60,8 +60,12 @@ new UpgradeHelper.Builder(ActivitySet.this)
 * upgradeNotes 显示在更新提示框的内容
 * upgradeTitle 显示在更新提示框的标题，如没有使用默认标题
 * isForce 0 ：可稍后更新，马上更新
+</br>
 ![image](https://raw.githubusercontent.com/paipo/screenshots/master/lightup0.jpg)
 * isForce 1 ：只有马上更新（不更新不能使用的情况）
+</br>
 ![image](https://raw.githubusercontent.com/paipo/screenshots/master/lightup1.jpg)
 * isForce 2 ：提示更新，不能做任何事情（特殊情况，如不兼容）
+</br>
 ![image](https://raw.githubusercontent.com/paipo/screenshots/master/lightup2.jpg)
+* md5 ：安装包的md5值，不一致时会提示 升级包错误，可在LightDialogActivity代码中查找 apkMD5= 查看的md5值
