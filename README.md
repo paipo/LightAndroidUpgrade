@@ -1,1 +1,64 @@
 # LightAndroidUpgrade
+安卓更新的一个简单组件
+
+## 使用方法
+1. 引用 lightupgrade library
+
+## 主要代码
+```java
+new UpgradeHelper.Builder(ActivitySet.this)
+                        .setUpgradeUrl("http://xxxxxx?version=1")
+                        .setDelay(1000)
+                        .setIsAboutChecking(true)
+                        .build().run(new UpgradeCheckCallback() {
+                            @Override
+                            public void Check(int c) {
+                                if(UpgradeCheckCallback.C_EQUAL == c){
+                                    //是同样版本
+                                    tv_zx.setText("是最新版本");
+                                }
+                            }
+                });
+
+```
+
+UpgradeCheckCallback 为回调，可不使用
+
+```java
+new UpgradeHelper.Builder(ActivitySet.this)
+                        .setUpgradeUrl("http://xxxxxx?version=1")
+                        .setDelay(1000)
+                        .setIsAboutChecking(true)
+                        .build().run();
+
+```
+
+## 更新服务端的 json 格式
+```json
+{ 
+	"status": "1", 
+	"message": "", 
+	"upgradeinfo": { 
+		"appName": "", 
+		"versionCode": "2",
+		"versionName":"2.0", 
+		"packageName": "com.xxxx",
+		"apkUrl":"http://xxxxx/xxx.apk", 
+		"upgradeNotes":"更新到 2.0", 
+		"upgradeTitle":"", 
+		"isForce":"0", 
+		"fileSize":"2000", 
+		"md5":"6013d8c92948313df8af5d9e7bc323c5" 
+		} 
+}
+```
+* status 1 时开始处理
+* versionCode 版本，用来对比当前版本
+* packageName 包名称
+* apkUrl 下载地址
+* upgradeNotes 显示在更新提示框的内容
+* upgradeTitle 显示在更新提示框的标题，如没有使用默认标题
+* isForce 0 ：可稍后更新，马上更新 1 ：只有马上更新（不更新不能使用的情况） 2 ：提示更新，不能做任何事情（特殊情况，如不兼容） 如图：
+![image](https://raw.githubusercontent.com/paipo/screenshots/master/tc.png)
+![image](https://raw.githubusercontent.com/paipo/screenshots/master/tc.png)
+![image](https://raw.githubusercontent.com/paipo/screenshots/master/tc.png)
