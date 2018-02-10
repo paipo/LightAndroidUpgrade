@@ -50,7 +50,6 @@ new UpgradeHelper.Builder(ActivitySet.this)
 		} 
 }
 ```
-## 1
 * status 1 时开始处理
 * versionCode 版本，用来对比当前版本
 * packageName 包名称
