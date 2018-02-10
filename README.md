@@ -2,8 +2,10 @@
 安卓更新的一个简单组件
 
 ## 使用方法
-1. 引用 lightupgrade library
-
+android studio 引用 lightupgrade library 到项目 , 在 gradle 添加代码 , 例如
+```java
+compile project(path:':lightupgrade')
+```
 ## 主要代码
 ```java
 new UpgradeHelper.Builder(ActivitySet.this)
@@ -15,14 +17,13 @@ new UpgradeHelper.Builder(ActivitySet.this)
                             public void Check(int c) {
                                 if(UpgradeCheckCallback.C_EQUAL == c){
                                     //是同样版本
-                                    tv_zx.setText("是最新版本");
                                 }
                             }
                 });
 
 ```
 
-UpgradeCheckCallback 为回调，可不使用
+UpgradeCheckCallback 为回调，不需要回调的时候
 
 ```java
 new UpgradeHelper.Builder(ActivitySet.this)
